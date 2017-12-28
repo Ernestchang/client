@@ -107,7 +107,6 @@ protocol teams {
   @typedef("string")
   record UserVersionPercentForm {}
 
-
   record TeamChangeReq {
     array<UserVersion> owners;
     array<UserVersion> admins;
@@ -688,7 +687,7 @@ protocol teams {
   TeamAndMemberShowcase getTeamAndMemberShowcase(string name);
   void setTeamShowcase(string name, union { null, boolean } isShowcased, union { null, string } description, union { null, boolean } anyMemberShowcase);
   void setTeamMemberShowcase(string name, boolean isShowcased);
-  
+
   record TeamOperation {
     boolean manageMembers;
     boolean manageSubteams;
